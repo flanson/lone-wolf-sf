@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'homepage_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+
+{% block body_content %}
+    <div class="container-fluid">
+        <header>
+            {% include ':Common:loneWolfIcon.html.twig' %}
+        </header>
+        <div class="main">
+            {# Create/Edit Hero #}
+            {% set message_key = (hasHero) ? 'edit_hero_button_label' : 'create_hero_button_label' %}
+            {% set href = (hasHero) ? path('hero_edition') : path('hero_new') %}
+            {% include ':Common:buttonWithPath.html.twig' %}
+
+            {% if hasHero %}
+                {# New/Continue Story #}
+                {% set message_key = (hasStory) ? 'continue_adventure_button_label' : 'start_adventure_button_label' %}
+                {% set href = (hasStory) ? path('continue_adventure') : path('new_adventure') %}
+                {% include ':Common:buttonWithPath.html.twig' %}
+            {% endif %}
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+{% endblock %}

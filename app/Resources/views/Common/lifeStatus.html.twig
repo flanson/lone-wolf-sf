@@ -1,0 +1,17 @@
+{% set lifeCurrent = lifeCurrent|default(1) %}
+{% set lifeMax = lifeMax|default(1) %}
+{% set lifePourcent = (lifeCurrent/lifeMax * 100) // 1 %}
+<div class="col-xs-9">
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ lifePourcent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ lifePourcent }}%">
+            <span class="sr-only">{{ lifePourcent }}% Complete (success)</span>
+        </div>
+    </div>
+</div>
+<div class="col-xs-3">
+    <div class="life-status">
+        <div class="life-status-current block-inline">{{ lifeCurrent }}</div>
+        /
+        <div class="life-status-max block-inline">{{ lifeMax }}</div>
+    </div>
+</div>

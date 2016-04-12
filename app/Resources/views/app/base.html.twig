@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>{% block title %}LoneWolf{% endblock %}</title>
+
+        {% block stylesheets %}
+            <!-- build:css(app/Resources/public) /dist/css/vendor.css -->
+            <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all">
+            <!-- endbuild -->
+            {#<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" type="text/css" media="all">#}
+            <!-- build:css(app/Resources/public) /dist/css/app.css -->
+            <link rel="stylesheet" href="/app/css/main.css" type="text/css" media="all">
+            <!-- endbuild -->
+        {% endblock %}
+
+        {% block Ie8Html5SupportJs %}
+            <!--[if lt IE 9]>
+            <!-- build:js(app/Resources/public) /dist/js/vendor.head.js -->
+            <script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+            <script src="/bower_components/respond/dist/respond.min.js"></script>
+            <!-- endbuild -->
+            <![endif]-->
+        {% endblock %}
+    </head>
+    <body class="{% block bodyClass %}bg-old-paper{% endblock %}">
+        {% block flash_message_list %}
+            {#{% include ':Common:flash_message_list.html.twig' %}#}
+        {% endblock %}
+
+        {% block body_content %}
+        {% endblock %}
+
+        {% block javascripts %}
+            <!-- build:js(app/Resources/public) /dist/js/vendor.js -->
+            <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+            <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- endbuild -->
+            <!-- build:js(app/Resources/public) /dist/js/app.js -->
+            <script src="/app/js/app.js"></script>
+            <script src="/app/js/main.js"></script>
+            <!-- endbuild -->
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,47 @@
+
+<div class="modal fade" id="selectChapter" tabindex="-1" role="dialog" aria-labelledby="selectChapterModalLabel">
+    <form class="modal-dialog" role="document" action="{{ path('combat_launch_dice') }}" method="post" data-digital-pad>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="selectChapterModalLabel">Select Dice Result</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="form-group">
+                        <label for="diceValue" class="control-label">Dice Result:</label>
+                        <input type="text" class="form-control" name="diceValue" id="diceValue" data-digit-input>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center row-padding-after-small">
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=7>7</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=8>8</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=9>9</button>
+            </div>
+            <div class="row text-center row-padding-after-small">
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=4>4</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=5>5</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=6>6</button>
+            </div>
+            <div class="row text-center row-padding-after-small">
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=1>1</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=2>2</button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=3>3</button>
+            </div>
+            <div class="row text-center row-padding-after">
+                <button type="button" class="btn btn-primary btn-lg" data-erase-key>
+                    <span class="glyphicon glyphicon-erase"></span>
+                </button>
+                <button type="button" class="btn btn-primary btn-lg number-keyboard-panel-item" data-digit-key=0>0</button>
+                <button type="button" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" value="Submit">Valid</button>
+            </div>
+        </div>
+    </form>
+</div>

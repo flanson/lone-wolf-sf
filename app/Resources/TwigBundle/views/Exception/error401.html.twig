@@ -1,0 +1,12 @@
+{# app/Resources/TwigBundle/views/Exception/error401.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body_content %}
+    {% set error_number = '401' %}
+
+    {% embed  ':Common:error.page.html.twig' %}
+        {% block image %}
+            <img src="{{ images_directory ~ '401.png' }}" class="img-thumbnail img-rounded img-responsive" />
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

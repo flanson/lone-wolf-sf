@@ -1,0 +1,26 @@
+{
+  "name": "lone-wolf-sf",
+  "description": "Lone Wolf project with symfony2",
+  "main": "app/Resources/public/js/main.js",
+  "authors": [
+    "florian.lanson@gmail.com"
+  ],
+  "license": "UNLICENSED",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "https://github.com/flanson/lone-wolf-sf",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/Resources/public/bower_components/",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "fontawesome": "~4.4.0",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2"
+  }
+}

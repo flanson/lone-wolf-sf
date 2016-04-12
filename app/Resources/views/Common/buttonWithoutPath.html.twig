@@ -1,0 +1,14 @@
+{% set message_key = message_key|default('unknown_label') %}
+{% set message = message|default('') %}
+{% if message == '' %}
+    {% set message = message_key|trans %}
+{% endif %}
+{% set iconClasses = iconClasses|default([]) %}
+<div class="row row-padding-after text-center">
+    <div class="btn btn-lg btn-primary">
+        {% if iconClasses|length > 0 %}
+            <span class="{{ iconClasses|join(' ') }}" aria-hidden="true"></span>&nbsp;&nbsp;
+        {% endif %}
+        {{ message }}
+    </div>
+</div>

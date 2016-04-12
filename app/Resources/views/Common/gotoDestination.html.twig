@@ -1,0 +1,9 @@
+{% set destination = destination|default(1) %}
+<div class="row row-padding-after text-center">
+    <form id="gotoDestination_{{ destination }}" action="{{ path('select_chapter') }}" method="post">
+        <div class="btn btn-lg btn-primary" data-form-sumbit="#gotoDestination_{{ destination }}">
+            <span class="glyphicon glyphicon-random text-danger" aria-hidden="true"></span>&nbsp;&nbsp;<strong>{{ destination }}</strong>
+            <input type="hidden" class="hidden" name="destination" id="destination" value="{{ destination }}">
+        </div>
+    </form>
+</div>

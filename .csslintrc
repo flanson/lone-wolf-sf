@@ -1,0 +1,18 @@
+{
+    "adjoining-classes": false,
+    "box-model": true,
+    "box-sizing": false,
+    "floats": true,
+    "font-sizes": true,
+    "important": true,
+    "known-properties": true,
+    "overqualified-elements": true,
+    "qualified-headings": true,
+    "regex-selectors": true,
+    "unique-headings": true,
+    "universal-selector": true,
+    "unqualified-attributes": true,
+    "ids": true,
+    "duplicate-background-images": true,
+    "font-faces": true
+}

@@ -1,0 +1,119 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+parameters:
+    locale: en
+    images.directory: '/dist/img/'
+
+framework:
+    #esi:             ~
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+#        handler_id:  ~
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    translator: { fallbacks: [%locale%] }
+    http_method_override: true
+    assets: ~
+
+# Assetic configuration
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+        jpegoptim:
+            bin: Tools/jpegoptim-1.3.0-win32-binary/jpegoptim
+            strip_all: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    globals:
+        images_directory: '%images.directory%'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_pgsql
+        host:     "%database.host%"
+        port:     "%database.port%"
+        dbname:   "%database.name%"
+        user:     "%database.user%"
+        password: "%database.password%"
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Doctrine Migration Configuration
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: LoneWolf\Migrations
+    table_name: migration_versions
+    name: LoneWolf Migrations
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer.transport%"
+    host:      "%mailer.host%"
+    username:  "%mailer.user%"
+    password:  "%mailer.password%"
+    spool:     { type: memory }
+
+# FOSUser Configuration
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: LoneWolfAppBundle\Entity\User
+
+# Easy admin Configuration
+easy_admin:
+    site_name: 'LoneWolf Admin'
+    list:
+        actions:
+             - { name: 'show', icon: 'search', label: false }
+             - { name: 'edit', icon: 'pencil', label: false }
+             - { name: 'delete', icon: 'close', label: false }
+    entities:
+        User:
+            class: LoneWolfAppBundle\Entity\User
+            list:
+                fields: ['username', 'email', 'enabled', 'locked', 'hero']
+            edit:
+                fields: ['username', 'email', 'enabled', 'locked', 'hero']
+            new:
+                fields:
+                    - { property: 'username' }
+                    - { property: 'email', type: 'email', label: 'E-mail address' }
+                    - { property: 'plainPassword', type: 'password' }
+                    - { property: 'enabled'}
+                    - { property: 'locked'}
+        Hero:
+            class: LoneWolfAppBundle\Entity\Hero
+        Enemy:
+            class: LoneWolfAppBundle\Entity\Enemy
+        Story:
+            class: LoneWolfAppBundle\Entity\Story
+        Chapter:
+            class: LoneWolfAppBundle\Entity\Chapter
+

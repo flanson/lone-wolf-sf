@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'homepage_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+
+{% block body_content %}
+    <div class="container-fluid">
+        <header>
+            {% include ':Common:loneWolfIcon.html.twig' %}
+        </header>
+        <div class="main">
+            {% for story in storyList %}
+                {% set message = story.name %}
+                {% set href = path('select_adventure', { id:story.id }) %}
+                {% include ':Common:buttonWithPath.html.twig' %}
+            {% endfor %}
+
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+{% endblock %}

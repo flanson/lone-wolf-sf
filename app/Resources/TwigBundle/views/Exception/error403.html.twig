@@ -1,0 +1,12 @@
+{# app/Resources/TwigBundle/views/Exception/error403.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body_content %}
+    {% set error_number = '403' %}
+
+    {% embed  ':Common:error.page.html.twig' %}
+        {% block image %}
+            <img src="{{ images_directory ~ '403.jpg' }}" class="img-thumbnail img-rounded img-responsive" />
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

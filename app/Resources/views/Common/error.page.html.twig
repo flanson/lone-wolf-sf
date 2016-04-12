@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <header>
+        <h1 class="text-center">{{ ('error_' ~ error_number ~ '_title')|trans }}</h1>
+    </header>
+    <div class="main">
+        <div class="row row-padding-after text-center">
+            <div class="container">
+                {% block image %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <div class="error-page-message row-padding-after">
+        {{ ('error_' ~ error_number ~ '_message')|trans }}
+    </div>
+    {% set message_key = 'return_homepage' %}
+    {% set href = path('homepage') %}
+    {% include ':Common:buttonWithPath.html.twig' %}
+</div>

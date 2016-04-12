@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'chapter_title'|trans({ '%game_label%': 'game_label'|trans, '%chapter_number%': chapter}, 'seo') }}{% endblock %}
+
+    {% block body_content %}
+        <div class="container-fluid">
+            <header>
+                <h1 class="text-center text-uppercase">{{ story.name }}</h1>
+                <h1 class="text-center text-uppercase">{{ 'chapter_title'|trans({'%chapter_number%': chapter}) }}</h1>
+                <div class="row row-padding-after text-center">
+                    {% set lifeCurrent = hero.life %}
+                    {% set lifeMax = hero.enduranceMax %}
+                    {% include ':Common:lifeStatus.html.twig' %}
+                </div>
+            {#{% include ':Common:loneWolfIcon.html.twig' %}#}
+            </header>
+            <div class="main">
+                {# Chapters selection button #}
+                {#{% set destinationList = [50,25,258] %}#}
+                {#{% for destination in destinationList %}#}
+                    {#{% include ':Common:gotoDestination.html.twig' %}#}
+                {#{% endfor %}#}
+
+                {# Select Chapter #}
+                {% set message_key = 'select_chapter_label' %}
+                {% include ':Common:chooseDestinationButton.html.twig' %}
+
+                {# Combat #}
+                {% set message_key = (hero.currentEnemy is null) ? 'goto_combat_label' : 'continue_combat_label'  %}
+                {% set href = (hero.currentEnemy is null) ? path('enemy_creation') : path('combat') %}
+                {% set iconClasses = ['glyphicon','glyphicon-tint','text-danger'] %}
+                {% include ':Common:buttonWithPath.html.twig' %}
+
+                {# Edit Hero Stats #}
+                {% set message_key = 'edit_hero_stats_label' %}
+                {% set href = path('hero_edition') %}
+                {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
+                {% include ':Common:buttonWithPath.html.twig' %}
+
+                {# Edit Hero Current Live #}
+                {#{% set message_key = 'edit_hero_life_label' %}#}
+                {#{% set href = path('hero_life') %}#}
+                {#{% set iconClasses = ['glyphicon','glyphicon-heart','text-danger'] %}#}
+                {#{% include ':Common:buttonWithPath.html.twig' %}#}
+
+                {# Abandon adventure #}
+                {% set message_key = 'abandon_adventure_label' %}
+                {% set href = path('abandon_adventure') %}
+                {% set iconClasses = [] %}
+                {#{% set iconClasses = ['glyphicon','glyphicon-heart','text-danger'] %}#}
+                {% include ':Common:buttonWithPath.html.twig' %}
+            </div>
+
+            {% include ':Common:chooseDestination.html.twig' %}
+
+            <footer>
+
+            </footer>
+        </div>
+    {% endblock %}

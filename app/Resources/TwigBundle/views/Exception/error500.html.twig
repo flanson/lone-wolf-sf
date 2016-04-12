@@ -1,0 +1,12 @@
+{# app/Resources/TwigBundle/views/Exception/error500.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body_content %}
+    {% set error_number = '500' %}
+
+    {% embed  ':Common:error.page.html.twig' %}
+        {% block image %}
+            <img src="{{ images_directory ~ '500.jpg' }}" class="img-thumbnail img-rounded img-responsive" />
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>{% block title %}LoneWolf{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="/dist/css/vendor.5304c02059281008.css" media="all">
+            {#<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" type="text/css" media="all">#}
+            <link rel="stylesheet" href="/dist/css/app.b014d93375b660cc.css" media="all">
+        {% endblock %}
+
+        {% block Ie8Html5SupportJs %}
+            <!--[if lt IE 9]>
+            <script src="/dist/js/vendor.head.3b40df82ff6a8bda.js"></script>
+            <![endif]-->
+        {% endblock %}
+    </head>
+    <body class="{% block bodyClass %}bg-old-paper{% endblock %}">
+        {% block flash_message_list %}
+            {#{% include ':Common:flash_message_list.html.twig' %}#}
+        {% endblock %}
+
+        {% block body_content %}
+        {% endblock %}
+
+        {% block javascripts %}
+            <script src="/dist/js/vendor.398a68a523434bcf.js"></script>
+            <script src="/dist/js/app.6fd42861ee670685.js"></script>
+        {% endblock %}
+    </body>
+</html>

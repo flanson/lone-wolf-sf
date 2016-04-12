@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'dead_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+
+    {% block body_content %}
+        <div class="container-fluid">
+            <header>
+                <h1 class="text-center">{{ 'dead_title'|trans }}</h1>
+            </header>
+            <div class="main">
+                <div class="row row-padding-after text-center">
+                    <div class="container">
+                        <img src="{{ images_directory ~ 'Dead.jpg' }}" class="img-thumbnail img-rounded img-responsive" />
+                        {#{% image 'bundles/lonewolfapp/img/Fantasy__039519_.jpg' filter='jpegoptim' %}#}
+                            {#<img src="{{ asset_url }}" alt="Death was waiting for you" class="img-thumbnail img-rounded img-responsive" />#}
+                        {#{% endimage %}#}
+                    </div>
+                </div>
+            </div>
+
+            {% include ':Common:chooseDestination.html.twig' %}
+
+            <footer>
+                {% set message_key = 'select_chapter_label' %}
+                {% include ':Common:chooseDestinationButton.html.twig' %}
+            </footer>
+        </div>
+    {% endblock %}

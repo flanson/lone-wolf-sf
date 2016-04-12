@@ -1,0 +1,13 @@
+<div class="error_messages_wrapper">
+    {% block flash_message %}
+        {% for type in ['info', 'success', 'error', 'warning'] %}
+            {% for message in app.session.flashBag.get(type) %}
+                {% set type = (type == 'error') ? 'danger' : type %}
+                <div class="alert alert-{{ type }}" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endblock %}
+</div>

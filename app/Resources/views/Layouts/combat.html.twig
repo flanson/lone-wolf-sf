@@ -1,0 +1,72 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'combat_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+
+    {% block body_content %}
+        <div class="container">
+
+            <div class="form-signin form-hero form-horizontal">
+
+                <h2 class="form-signin-heading">
+                    {{ 'hero_life_label'|trans }}
+                    {% if heroPreviousLife|default(null) is not null and heroHitDamage|default(null) is not null %}
+                        <span class="combat-result">{{ heroPreviousLife }}&nbsp;-&nbsp;{{ heroHitDamage }}</span>
+                    {% endif %}
+                </h2>
+                <div class="row text-center">
+                    {% set lifeCurrent = hero.life|default(1) %}
+                    {% set lifeMax = hero.enduranceMax|default(1) %}
+                    {% include ':Common:lifeStatus.html.twig' %}
+                </div>
+                <div class="text-center combat-ratio">
+                    {{ 'combat_ratio_label'|trans({ '%combat_ratio%' : combatRatio }) }}
+                </div>
+                {% if diceValue|default(null) is not null %}
+                    {#<h3>{{ 'dice_rolled_label'|trans({ '%diceValue%' : diceValue }) }}</h3>#}
+                    <div class="dice-value">{{ diceValue }}</div>
+                {% endif %}
+                <h2 class="form-signin-heading">
+                    {{ 'enemy_life_label'|trans }}
+                    {% if enemyPreviousLife|default(null) is not null and enemyHitDamage|default(null) is not null %}
+                        <span class="combat-result">{{ enemyPreviousLife }}&nbsp;-&nbsp;{{ enemyHitDamage }}</span>
+                    {% endif %}
+                </h2>
+                <div class="row text-center">
+                    {% set lifeCurrent = enemy.life|default(1) %}
+                    {% set lifeMax = enemy.enduranceMax|default(1) %}
+                    {% include ':Common:lifeStatus.html.twig' %}
+                </div>
+            </div>
+
+            {# Launch Dice #}
+            {% set message_key = 'launch_dice_label' %}
+            {% include ':Common:chooseDestinationButton.html.twig' %}
+
+            {# Edit Hero Stats #}
+            {% set message_key = 'edit_hero_stats_label' %}
+            {% set href = path('hero_edition') %}
+            {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
+            {% include ':Common:buttonWithPath.html.twig' %}
+
+            {# Edit Enemy Stats #}
+            {% set message_key = 'edit_enemy_stats_label' %}
+            {% set href = path('enemy_edition') %}
+            {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
+            {% include ':Common:buttonWithPath.html.twig' %}
+
+            {# Abandon combat #}
+            <div class="form-signin">
+                {% set href = path('abandon_combat') %}
+                <a href="{{ href }}">
+                    <div class="btn btn-lg btn-primary btn-block">
+                        {{ 'abandon_combat_label'|trans }}
+                    </div>
+                </a>
+            </div>
+
+            {% include ':Common:launchDice.html.twig' %}
+
+        </div> <!-- /container -->
+
+        {% include ':Common:chooseDestination.html.twig' %}
+    {% endblock %}

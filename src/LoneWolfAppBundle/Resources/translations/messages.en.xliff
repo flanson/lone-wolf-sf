@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+    <file date="2016-02-22T10:28:45Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+        <header>
+            <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+            <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+        </header>
+        <body>
+            <trans-unit id="chapter_title">
+                <source>chapter_title</source>
+                <target><![CDATA[Chapter #%chapter_number%]]></target>
+            </trans-unit>
+            <trans-unit id="create_hero_button_label">
+                <source>create_hero_button_label</source>
+                <target><![CDATA[Create Hero]]></target>
+            </trans-unit>
+            <trans-unit id="edit_hero_button_label">
+                <source>edit_hero_button_label</source>
+                <target><![CDATA[Edit Hero]]></target>
+            </trans-unit>
+            <trans-unit id="start_adventure_button_label">
+                <source>start_adventure_button_label</source>
+                <target><![CDATA[New Story]]></target>
+            </trans-unit>
+            <trans-unit id="continue_adventure_button_label">
+                <source>continue_adventure_button_label</source>
+                <target><![CDATA[Continue Story]]></target>
+            </trans-unit>
+            <trans-unit id="unknown_label">
+                <source>unknown_label</source>
+                <target><![CDATA[Message label for this element was not found... Check your code bro !]]></target>
+            </trans-unit>
+            <trans-unit id="select_chapter_label">
+                <source>select_chapter_label</source>
+                <target><![CDATA[Select Chapter]]></target>
+            </trans-unit>
+            <trans-unit id="return_to_chapter_label">
+                <source>return_to_chapter_label</source>
+                <target><![CDATA[Return to Chapter selection]]></target>
+            </trans-unit>
+            <trans-unit id="goto_combat_label">
+                <source>goto_combat_label</source>
+                <target><![CDATA[Combat]]></target>
+            </trans-unit>
+            <trans-unit id="continue_combat_label">
+                <source>continue_combat_label</source>
+                <target><![CDATA[Continue Combat]]></target>
+            </trans-unit>
+            <trans-unit id="edit_hero_stats_label">
+                <source>edit_hero_stats_label</source>
+                <target><![CDATA[Edit Hero Stats]]></target>
+            </trans-unit>
+            <trans-unit id="edit_enemy_stats_label">
+                <source>edit_enemy_stats_label</source>
+                <target><![CDATA[Edit Enemy Stats]]></target>
+            </trans-unit>
+            <trans-unit id="edit_hero_life_label">
+                <source>edit_hero_life_label</source>
+                <target><![CDATA[Edit Hero Current Live]]></target>
+            </trans-unit>
+            <trans-unit id="game_label">
+                <source>game_label</source>
+                <target><![CDATA[Joe Dever's Lone Wolf]]></target>
+            </trans-unit>
+            <trans-unit id="abandon_adventure_label">
+                <source>abandon_adventure_label</source>
+                <target><![CDATA[Abandon Adventure]]></target>
+            </trans-unit>
+            <trans-unit id="abandon_combat_label">
+                <source>abandon_combat_label</source>
+                <target><![CDATA[Abandon Combat]]></target>
+            </trans-unit>
+            <trans-unit id="cancel_button_label">
+                <source>cancel_button_label</source>
+                <target><![CDATA[Cancel]]></target>
+            </trans-unit>
+            <trans-unit id="hero_creation_form_title">
+                <source>hero_creation_form_title</source>
+                <target><![CDATA[Create Hero]]></target>
+            </trans-unit>
+            <trans-unit id="hero_edition_form_title">
+                <source>hero_edition_form_title</source>
+                <target><![CDATA[Edit Hero]]></target>
+            </trans-unit>
+            <trans-unit id="enemy_creation_form_title">
+                <source>enemy_creation_form_title</source>
+                <target><![CDATA[Define Enemy Stats]]></target>
+            </trans-unit>
+            <trans-unit id="enemy_edition_form_title">
+                <source>enemy_edition_form_title</source>
+                <target><![CDATA[Edit Enemy]]></target>
+            </trans-unit>
+            <trans-unit id="create_button_label">
+                <source>create_button_label</source>
+                <target><![CDATA[Create]]></target>
+            </trans-unit>
+            <trans-unit id="save_button_label">
+                <source>save_button_label</source>
+                <target><![CDATA[Save]]></target>
+            </trans-unit>
+            <trans-unit id="delete_button_label">
+                <source>delete_button_label</source>
+                <target><![CDATA[Delete]]></target>
+            </trans-unit>
+            <trans-unit id="enemy_life_label">
+                <source>enemy_life_label</source>
+                <target><![CDATA[Enemy Life]]></target>
+            </trans-unit>
+            <trans-unit id="hero_life_label">
+                <source>hero_life_label</source>
+                <target><![CDATA[Hero Life]]></target>
+            </trans-unit>
+            <trans-unit id="launch_dice_label">
+                <source>launch_dice_label</source>
+                <target><![CDATA[Launch Dice]]></target>
+            </trans-unit>
+            <trans-unit id="combat_ratio_label">
+                <source>combat_ratio_label</source>
+                <target><![CDATA[Combat Ratio %combat_ratio%]]></target>
+            </trans-unit>
+            <trans-unit id="dice_rolled_label">
+                <source>dice_rolled_label</source>
+                <target><![CDATA[Dice rolled : %diceValue%]]></target>
+            </trans-unit>
+            <trans-unit id="dead_title">
+                <source>dead_title</source>
+                <target><![CDATA[Dead, You're Dead !]]></target>
+            </trans-unit>
+            <trans-unit id="sign_in_form_title">
+                <source>sign_in_form_title</source>
+                <target><![CDATA[Please sign in]]></target>
+            </trans-unit>
+            <trans-unit id="return_homepage">
+                <source>return_homepage</source>
+                <target><![CDATA[Return to the homepage]]></target>
+            </trans-unit>
+            <trans-unit id="error_500_title">
+                <source>error_500_title</source>
+                <target><![CDATA[500 Internal Server Error]]></target>
+            </trans-unit>
+            <trans-unit id="error_500_message">
+                <source>error_500_message</source>
+                <target><![CDATA[An error occured]]></target>
+            </trans-unit>
+            <trans-unit id="error_401_title">
+                <source>error_401_title</source>
+                <target><![CDATA[401 Unauthorized]]></target>
+            </trans-unit>
+            <trans-unit id="error_401_message">
+                <source>error_401_message</source>
+                <target><![CDATA[You are not authorized to see this page. Please log with an adequate role]]></target>
+            </trans-unit>
+            <trans-unit id="error_403_title">
+                <source>error_403_title</source>
+                <target><![CDATA[403 forbidden]]></target>
+            </trans-unit>
+            <trans-unit id="error_403_message">
+                <source>error_403_message</source>
+                <target><![CDATA[You are not authorized to see this page]]></target>
+            </trans-unit>
+            <trans-unit id="error_404_title">
+                <source>error_404_title</source>
+                <target><![CDATA[404 Not Found]]></target>
+            </trans-unit>
+            <trans-unit id="error_404_message">
+                <source>error_404_message</source>
+                <target><![CDATA[The requested page couldn't be located. Checkout for any URL misspelling]]></target>
+            </trans-unit>
+            <trans-unit id="error_405_title">
+                <source>error_405_title</source>
+                <target><![CDATA[405 Method Not Allowed]]></target>
+            </trans-unit>
+            <trans-unit id="error_405_message">
+                <source>error_405_message</source>
+                <target><![CDATA[This page is not allow with the method. (TODO indicate the method tried)]]></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

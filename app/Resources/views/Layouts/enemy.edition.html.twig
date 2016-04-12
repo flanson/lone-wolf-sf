@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'enemy_edition_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+
+{% form_theme edit_form ':Form:formRow.html.twig' %}
+
+{% block body_content %}
+    <div class="container">
+
+        {{ form_start(edit_form, { 'attr': { 'class': 'form-signin form-hero form-horizontal'}}) }}
+        {{ form_errors(edit_form) }}
+        {% set message_key = newEnemy ? 'enemy_creation_form_title' : 'enemy_edition_form_title' %}
+        <h2 class="form-signin-heading">{{ message_key|trans }}</h2>
+        <div class="row row-padding-after text-center">
+            {% set lifeCurrent = enemy.life|default(1) %}
+            {% set lifeMax = enemy.enduranceMax|default(1) %}
+            {% include ':Common:lifeStatus.html.twig' %}
+        </div>
+
+        {{ form_row(edit_form.name) }}
+
+        {{ form_row(edit_form.enduranceMax, { 'input_group_addon_text' : 'E'}) }}
+
+        {{ form_row(edit_form.life, { 'input_group_addon_text' : 'HP'}) }}
+
+        {{ form_row(edit_form.combatSkill, { 'input_group_addon_text' : 'H'}) }}
+
+        {% set message_key = newEnemy ? 'create_button_label' : 'save_button_label' %}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{{ message_key|trans }}</button>
+        {{ form_end(edit_form) }}
+
+        {# TODO : change to (X) in upper right #}
+        <div class="form-signin">
+            {% set href = path('homepage') %}
+            <a href="{{ href }}">
+                <div class="btn btn-lg btn-primary btn-block">
+                    {{ 'cancel_button_label'|trans }}
+                </div>
+            </a>
+        </div>
+
+        {% if delete_form|default(null) %}
+            {# Delete Hero #}
+            {#form-signin form-hero form-horizontal#}
+            {{ form_start(delete_form, { 'attr': { 'class': 'form-signin form-hero form-horizontal'}}) }}
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Delete">{{ 'delete_button_label'|trans }}</button>
+            {#<input type="submit" value="Delete">#}
+            {{ form_end(delete_form) }}
+        {% endif %}
+
+    </div> <!-- /container -->
+{% endblock %}
