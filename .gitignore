@@ -5,6 +5,7 @@
 /node_modules
 /cache.properties
 /app/config/parameters.yml
+/app/config/parameters.save.yml
 /build/
 /phpunit.xml
 /var/*
