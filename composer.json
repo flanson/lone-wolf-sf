@@ -94,7 +94,14 @@
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database.host": "DATABASE_HOST",
+                "database.port": "DATABASE_PORT",
+                "database.name": "DATABASE_NAME",
+                "database.user": "DATABASE_USER",
+                "database.password": "DATABASE_PASSWORD"
+            }
         }
     }
 }

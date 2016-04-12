@@ -1,13 +1,12 @@
 {
   "name": "Test Sample",
   "description": "A symfony app with postgresql",
-  "repository": "https://github.com/heroku/node-js-sample",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "repository": "https://github.com/flanson/lone-wolf-sf",
   "addons": [
     "heroku-postgresql:hobby-dev"
   ],
   "scripts": {
     "postdeploy": "php bin/console doctrine:migrations:migrate --no-interaction"
   },
-  "keywords": ["node", "express", "static"]
+  "keywords": ["node", "test", "symfony"]
 }
