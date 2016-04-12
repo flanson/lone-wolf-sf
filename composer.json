@@ -22,7 +22,6 @@
         "ext-memcached": "*",
         "ext-mbstring": "*",
         "ext-intl": "*",
-        "ext-apcu": "*",
         "ext-pdo": "*",
         "ext-pdo_pgsql": "*",
         "symfony/symfony": "3.0.*",
