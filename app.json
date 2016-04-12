@@ -6,6 +6,7 @@
     "heroku-postgresql:hobby-dev"
   ],
   "scripts": {
+    "postinstall": "grunt buildProduction",
     "postdeploy": "php bin/console doctrine:migrations:migrate --no-interaction"
   },
   "keywords": ["node", "test", "symfony"]

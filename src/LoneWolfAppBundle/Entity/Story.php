@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="story")
  * @ORM\Entity(repositoryClass="LoneWolfAppBundle\Repository\StoryRepository")
  */
-class Story implements StoryInterface
+class Story
 {
     /**
      * @var int
