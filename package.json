@@ -2,6 +2,9 @@
   "name": "lone-wolf-sf",
   "version": "1.0.0",
   "description": "Lone Wolf project with symfony2",
+  "scripts": {
+    "postinstall": "bower install && grunt"
+  },
   "directories": {
     "test": "tests"
   },
