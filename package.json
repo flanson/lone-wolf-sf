@@ -1,16 +1,9 @@
 {
   "name": "lone-wolf-sf",
   "version": "1.0.0",
-  "engines": {
-    "node": "4.3.0",
-    "npm": "2.14.x"
-  },
   "description": "Lone Wolf project with symfony2",
   "directories": {
     "test": "tests"
-  },
-  "scripts": {
-    "postinstall": "bower install && grunt build"
   },
   "author": "florian.lanson@gmail.com",
   "license": "UNLICENSED",
