@@ -26,7 +26,6 @@ class HeroController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render(':Layouts:hero.life.management.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
     /**
@@ -37,7 +36,6 @@ class HeroController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render(':Layouts:dead.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
 
@@ -60,11 +58,12 @@ class HeroController extends Controller
             $this->get('session')->getFlashBag()->add('error', sprintf('This action is not permitted when you have a Hero : %s', 'new'));
             return $this->redirectToRoute('homepage');
         }
-        $form = $this->createForm('LoneWolfAppBundle\Form\HeroType', $hero);
+        $form = $this->createForm('LoneWolfAppBundle\Form\HeroCreateType', $hero);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user->setHero($hero);
+            $hero->setLifeToMax();
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($hero);
             $entityManager->persist($user);
@@ -141,6 +140,9 @@ class HeroController extends Controller
             $entityManager->persist($user);
             $entityManager->remove($hero);
             $entityManager->flush();
+            $this->get('session')->getFlashBag()->add('success', sprintf('Hero deleted'));
+        } else {
+            $this->get('session')->getFlashBag()->add('error', sprintf('Hero not deleted. Form not valid or not submitted'));
         }
 
         return $this->redirectToRoute('homepage');

@@ -116,4 +116,12 @@ easy_admin:
             class: LoneWolfAppBundle\Entity\Story
         Chapter:
             class: LoneWolfAppBundle\Entity\Chapter
+        Combat:
+            class: LoneWolfAppBundle\Entity\Combat
+        Adventure:
+            class: LoneWolfAppBundle\Entity\Adventure
+        Etape:
+            class: LoneWolfAppBundle\Entity\Etape
+        Campaign:
+            class: LoneWolfAppBundle\Entity\Campaign
 

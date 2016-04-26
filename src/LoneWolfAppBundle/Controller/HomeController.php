@@ -24,7 +24,7 @@ class HomeController extends Controller
         if ($user->getHero() != null) {
             $userHero = $user->getHero();
             $hasHero = true;
-            if ($userHero->getCurrentStory() != null) {
+            if ($userHero->getCurrentAdventure() != null) {
                 $hasStory = true;
             }
         }
