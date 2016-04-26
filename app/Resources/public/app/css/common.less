@@ -15,6 +15,7 @@
 
 .bg-old-paper {
   background-image: url(@bg-image);
+  background-size: 100%;
 }
 
 .block-inline {
@@ -41,4 +42,43 @@ h1, h2 {
   text-align: center;
   padding-bottom: 15px;
   font-size: 26px;
+}
+
+.progress-bar-full {
+  background-color: @life-bar-color-full;
+}
+.progress-bar-fine {
+  background-color: @life-bar-color-fine;
+}
+.progress-bar-ok {
+  background-color: @life-bar-color-ok;
+}
+.progress-bar-wounded {
+  background-color: @life-bar-color-wounded;
+}
+.progress-bar-hurt {
+  background-color: @life-bar-color-hurt;
+}
+
+.dropdown-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+.dropdown-menu {
+  .divider {
+    background-color: @separator-color;
+  }
+  & > li {
+    & > a {
+      &:focus,
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.btn-form {
+  max-width: 300px;
+  margin: 0 auto;
 }

@@ -20,11 +20,11 @@
             </trans-unit>
             <trans-unit id="start_adventure_button_label">
                 <source>start_adventure_button_label</source>
-                <target><![CDATA[New Story]]></target>
+                <target><![CDATA[New Adventure]]></target>
             </trans-unit>
             <trans-unit id="continue_adventure_button_label">
                 <source>continue_adventure_button_label</source>
-                <target><![CDATA[Continue Story]]></target>
+                <target><![CDATA[Continue Adventure]]></target>
             </trans-unit>
             <trans-unit id="unknown_label">
                 <source>unknown_label</source>
@@ -40,7 +40,7 @@
             </trans-unit>
             <trans-unit id="goto_combat_label">
                 <source>goto_combat_label</source>
-                <target><![CDATA[Combat]]></target>
+                <target><![CDATA[Combat New Enemy]]></target>
             </trans-unit>
             <trans-unit id="continue_combat_label">
                 <source>continue_combat_label</source>
@@ -57,6 +57,14 @@
             <trans-unit id="edit_hero_life_label">
                 <source>edit_hero_life_label</source>
                 <target><![CDATA[Edit Hero Current Live]]></target>
+            </trans-unit>
+            <trans-unit id="edit_hero_life_management_label">
+                <source>edit_hero_life_management_label</source>
+                <target><![CDATA[Current]]></target>
+            </trans-unit>
+            <trans-unit id="edit_hero_life_management_title">
+                <source>edit_hero_life_management_title</source>
+                <target><![CDATA[Hero Live]]></target>
             </trans-unit>
             <trans-unit id="game_label">
                 <source>game_label</source>
@@ -104,11 +112,11 @@
             </trans-unit>
             <trans-unit id="enemy_life_label">
                 <source>enemy_life_label</source>
-                <target><![CDATA[Enemy Life]]></target>
+                <target><![CDATA[%enemy_name%]]></target>
             </trans-unit>
             <trans-unit id="hero_life_label">
                 <source>hero_life_label</source>
-                <target><![CDATA[Hero Life]]></target>
+                <target><![CDATA[LoneWolf]]></target>
             </trans-unit>
             <trans-unit id="launch_dice_label">
                 <source>launch_dice_label</source>
@@ -118,6 +126,10 @@
                 <source>combat_ratio_label</source>
                 <target><![CDATA[Combat Ratio %combat_ratio%]]></target>
             </trans-unit>
+            <trans-unit id="combat_ratio_label_tc">
+                <source>combat_ratio_label_tc</source>
+                <target>[-11,0]Combat Ratio %combatRatio%|[1,11]Combat Ratio +%combatRatio%</target>
+            </trans-unit>
             <trans-unit id="dice_rolled_label">
                 <source>dice_rolled_label</source>
                 <target><![CDATA[Dice rolled : %diceValue%]]></target>
@@ -125,6 +137,10 @@
             <trans-unit id="dead_title">
                 <source>dead_title</source>
                 <target><![CDATA[Dead, You're Dead !]]></target>
+            </trans-unit>
+            <trans-unit id="dead_label">
+                <source>dead_label</source>
+                <target><![CDATA[Your life and your quest end here.]]></target>
             </trans-unit>
             <trans-unit id="sign_in_form_title">
                 <source>sign_in_form_title</source>
@@ -173,6 +189,57 @@
             <trans-unit id="error_405_message">
                 <source>error_405_message</source>
                 <target><![CDATA[This page is not allow with the method. (TODO indicate the method tried)]]></target>
+            </trans-unit>
+            <trans-unit id="add_one_life">
+                <source>add_one_life</source>
+                <target><![CDATA[+1]]></target>
+            </trans-unit>
+            <trans-unit id="close_button">
+                <source>close_button</source>
+                <target><![CDATA[Close]]></target>
+            </trans-unit>
+            <trans-unit id="goto_confirmation">
+                <source>goto_confirmation</source>
+                <target><![CDATA[Go !]]></target>
+            </trans-unit>
+            <trans-unit id="are_you_sure_confirmation">
+                <source>are_you_sure_confirmation</source>
+                <target><![CDATA[Yes]]></target>
+            </trans-unit>
+            <trans-unit id="goto_title">
+                <source>goto_title</source>
+                <target><![CDATA[Choose chapter]]></target>
+            </trans-unit>
+            <trans-unit id="goto_description">
+                <source>goto_description</source>
+                <target><![CDATA[Chapter:]]></target>
+            </trans-unit>
+            <trans-unit id="dice_title">
+                <source>dice_title</source>
+                <target><![CDATA[Select Dice Result]]></target>
+            </trans-unit>
+            <trans-unit id="dice_description">
+                <source>dice_description</source>
+                <target><![CDATA[Dice Result:]]></target>
+            </trans-unit>
+            <trans-unit id="dice_valid">
+                <source>dice_valid</source>
+                <target><![CDATA[Valid]]></target>
+            </trans-unit>
+            <trans-unit id="delete_hero_description">
+                <source>delete_hero_description</source>
+                <target><![CDATA[Do you really want to delete you Hero ?
+                 All data related to the hero will be lost.]]></target>
+            </trans-unit>
+            <trans-unit id="abandon_adventure_description">
+                <source>abandon_adventure_description</source>
+                <target><![CDATA[Do you really want to abandon this adventure ?
+                 All data related to your wonderful adventure be lost.]]></target>
+            </trans-unit>
+            <trans-unit id="abandon_combat_description">
+                <source>abandon_combat_description</source>
+                <target><![CDATA[Do you really want to abandon this fight and flee like a coward ?
+                 The Enemy will be lost in the abyss.]]></target>
             </trans-unit>
         </body>
     </file>

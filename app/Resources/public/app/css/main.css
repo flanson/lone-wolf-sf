@@ -10,6 +10,7 @@
 }
 .bg-old-paper {
   background-image: url('../img/free-paper-texture-6.jpg');
+  background-size: 100%;
 }
 .block-inline {
   display: inline-block;
@@ -32,6 +33,36 @@ h2 {
   text-align: center;
   padding-bottom: 15px;
   font-size: 26px;
+}
+.progress-bar-full {
+  background-color: #5cb85c;
+}
+.progress-bar-fine {
+  background-color: #C8F04E;
+}
+.progress-bar-ok {
+  background-color: #F0DC4E;
+}
+.progress-bar-wounded {
+  background-color: #f0ad4e;
+}
+.progress-bar-hurt {
+  background-color: #d9534f;
+}
+.dropdown-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+.dropdown-menu .divider {
+  background-color: #8A6D3B;
+}
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  background-color: transparent;
+}
+.btn-form {
+  max-width: 300px;
+  margin: 0 auto;
 }
 body {
   padding-top: 40px;
