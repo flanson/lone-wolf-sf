@@ -1,0 +1,288 @@
+{
+  "3": [
+    {
+      "name": "Strongroom ...",
+      "COMBAT SKILL": "13",
+      "ENDURANCE": "22"
+    }
+  ],
+  "10": [
+    {
+      "name": "Zakhan Kimah",
+      "COMBAT SKILL": "30",
+      "ENDURANCE": "38"
+    }
+  ],
+  "32": [
+    {
+      "name": "Roctopus",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "18"
+    }
+  ],
+  "36": [
+    {
+      "name": "Drunken Mer...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "26"
+    }
+  ],
+  "46": [
+    {
+      "name": "Crocaryx",
+      "COMBAT SKILL": "12",
+      "ENDURANCE": "38"
+    }
+  ],
+  "82": [
+    {
+      "name": "Anarian Sky...",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "28"
+    }
+  ],
+  "85": [
+    {
+      "name": "Anarian Ran...",
+      "COMBAT SKILL": "32",
+      "ENDURANCE": "38"
+    }
+  ],
+  "86": [
+    {
+      "name": "Drunken Mer...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "26"
+    }
+  ],
+  "97": [
+    {
+      "name": "Zaaryx Ghoul",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "27"
+    }
+  ],
+  "98": [
+    {
+      "name": "Deldenian M...",
+      "COMBAT SKILL": "26",
+      "ENDURANCE": "34"
+    }
+  ],
+  "104": [
+    {
+      "name": "Ghoul",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "29"
+    }
+  ],
+  "116": [
+    {
+      "name": "Crocaryx",
+      "COMBAT SKILL": "12",
+      "ENDURANCE": "38"
+    }
+  ],
+  "119": [
+    {
+      "name": "Drunken Mer...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "30"
+    }
+  ],
+  "127": [
+    {
+      "name": "Deldenian M...",
+      "COMBAT SKILL": "26",
+      "ENDURANCE": "34"
+    }
+  ],
+  "128": [
+    {
+      "name": "Zakhan Kimah",
+      "COMBAT SKILL": "39",
+      "ENDURANCE": "46"
+    }
+  ],
+  "129": [
+    {
+      "name": "Cave Leekhon",
+      "COMBAT SKILL": "27",
+      "ENDURANCE": "38"
+    }
+  ],
+  "148": [
+    {
+      "name": "6 Doomwolve...",
+      "COMBAT SKILL": "38",
+      "ENDURANCE": "56"
+    }
+  ],
+  "166": [
+    {
+      "name": "Psi-ghoul",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "30"
+    }
+  ],
+  "182": [
+    {
+      "name": "Senate Guards",
+      "COMBAT SKILL": "28",
+      "ENDURANCE": "32"
+    }
+  ],
+  "188": [
+    {
+      "name": "Zakhan Kimah",
+      "COMBAT SKILL": "29",
+      "ENDURANCE": "38"
+    }
+  ],
+  "191": [
+    {
+      "name": "Psi-ghoul",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "30"
+    }
+  ],
+  "214": [
+    {
+      "name": "Zadragon",
+      "COMBAT SKILL": "43",
+      "ENDURANCE": "58"
+    }
+  ],
+  "217": [
+    {
+      "name": "Pickpocket",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "25"
+    }
+  ],
+  "220": [
+    {
+      "name": "Drakkarim A...",
+      "COMBAT SKILL": "30",
+      "ENDURANCE": "42"
+    }
+  ],
+  "238": [
+    {
+      "name": "Sergeant an...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "32"
+    },
+    {
+      "name": "Tower Guard...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "32"
+    },
+    {
+      "name": "Tower Guard...",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "29"
+    }
+  ],
+  "244": [
+    {
+      "name": "Doomwolf",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "26"
+    }
+  ],
+  "249": [
+    {
+      "name": "Gourgaz",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "34"
+    }
+  ],
+  "254": [
+    {
+      "name": "Ghoul Pack",
+      "COMBAT SKILL": "24",
+      "ENDURANCE": "35"
+    }
+  ],
+  "260": [
+    {
+      "name": "Drunken Mer...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "26"
+    }
+  ],
+  "277": [
+    {
+      "name": "Zadragon",
+      "COMBAT SKILL": "43",
+      "ENDURANCE": "58"
+    }
+  ],
+  "285": [
+    {
+      "name": "Giak Scouts",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "20"
+    }
+  ],
+  "301": [
+    {
+      "name": "Psi-ghoul",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "30"
+    }
+  ],
+  "308": [
+    {
+      "name": "Deldenian M...",
+      "COMBAT SKILL": "26",
+      "ENDURANCE": "34"
+    }
+  ],
+  "309": [
+    {
+      "name": "Tower Guard...",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "29"
+    },
+    {
+      "name": "Tower Guard...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "32"
+    },
+    {
+      "name": "Tower Guard...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "32"
+    }
+  ],
+  "316": [
+    {
+      "name": "Gatehouse G...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "26"
+    }
+  ],
+  "322": [
+    {
+      "name": "Ghoul Pack",
+      "COMBAT SKILL": "24",
+      "ENDURANCE": "35"
+    }
+  ],
+  "327": [
+    {
+      "name": "Roctopus",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "18"
+    }
+  ],
+  "336": [
+    {
+      "name": "Zadragon",
+      "COMBAT SKILL": "43",
+      "ENDURANCE": "58"
+    }
+  ]
+}

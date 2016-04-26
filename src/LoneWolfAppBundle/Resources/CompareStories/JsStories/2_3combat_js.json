@@ -1,0 +1,271 @@
+{
+  "8": [
+    {
+      "name": "Vordaks",
+      "COMBAT SKILL": "28",
+      "ENDURANCE": "40"
+    }
+  ],
+  "13": [
+    {
+      "name": "Vordak 1",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "28"
+    },
+    {
+      "name": "Vordak 2",
+      "COMBAT SKILL": "21",
+      "ENDURANCE": "26"
+    }
+  ],
+  "30": [
+    {
+      "name": "Gnaag Helghast",
+      "COMBAT SKILL": "34",
+      "ENDURANCE": "48"
+    }
+  ],
+  "38": [
+    {
+      "name": "Ghagrim",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "38"
+    }
+  ],
+  "40": [
+    {
+      "name": "Bourn the B...",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "24"
+    }
+  ],
+  "41": [
+    {
+      "name": "Monks of th...",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "31"
+    }
+  ],
+  "47": [
+    {
+      "name": "Gnaag Helghast",
+      "COMBAT SKILL": "28",
+      "ENDURANCE": "40"
+    }
+  ],
+  "52": [
+    {
+      "name": "Taan-spider",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "52"
+    }
+  ],
+  "74": [
+    {
+      "name": "Korkuna",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "36"
+    }
+  ],
+  "88": [
+    {
+      "name": "Drakkarim H...",
+      "COMBAT SKILL": "24",
+      "ENDURANCE": "30"
+    }
+  ],
+  "101": [
+    {
+      "name": "Vordaks",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "30"
+    }
+  ],
+  "106": [
+    {
+      "name": "Monks (on h...",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "29"
+    }
+  ],
+  "110": [
+    {
+      "name": "Monks of th...",
+      "COMBAT SKILL": "25",
+      "ENDURANCE": "45"
+    }
+  ],
+  "155": [
+    {
+      "name": "Silver Swam...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "60"
+    }
+  ],
+  "159": [
+    {
+      "name": "Kezoor",
+      "COMBAT SKILL": "28",
+      "ENDURANCE": "45"
+    }
+  ],
+  "162": [
+    {
+      "name": "Drakkarim H...",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "28"
+    }
+  ],
+  "164": [
+    {
+      "name": "Monks of th...",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "36"
+    }
+  ],
+  "169": [
+    {
+      "name": "Vordak",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "26"
+    }
+  ],
+  "183": [
+    {
+      "name": "Gnaag Helghast",
+      "COMBAT SKILL": "34",
+      "ENDURANCE": "48"
+    }
+  ],
+  "199": [
+    {
+      "name": "Kezoor",
+      "COMBAT SKILL": "26",
+      "ENDURANCE": "43"
+    }
+  ],
+  "205": [
+    {
+      "name": "Ghagrim",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "38"
+    }
+  ],
+  "231": [
+    {
+      "name": "Monks of th...",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "36"
+    }
+  ],
+  "233": [
+    {
+      "name": "Rogue Miner",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "25"
+    }
+  ],
+  "241": [
+    {
+      "name": "Hunting Dogs",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "25"
+    }
+  ],
+  "251": [
+    {
+      "name": "Bourn the B...",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "24"
+    }
+  ],
+  "252": [
+    {
+      "name": "Xlorg",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "30"
+    }
+  ],
+  "257": [
+    {
+      "name": "Boran",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "29"
+    }
+  ],
+  "265": [
+    {
+      "name": "Xlorg",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "30"
+    }
+  ],
+  "287": [
+    {
+      "name": "Vordak 1",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "28"
+    },
+    {
+      "name": "Vordak 2",
+      "COMBAT SKILL": "21",
+      "ENDURANCE": "26"
+    }
+  ],
+  "298": [
+    {
+      "name": "Rogue Miner",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "25"
+    }
+  ],
+  "305": [
+    {
+      "name": "Hunting Dogs",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "25"
+    }
+  ],
+  "308": [
+    {
+      "name": "Gnaag Helghast",
+      "COMBAT SKILL": "38",
+      "ENDURANCE": "48"
+    }
+  ],
+  "313": [
+    {
+      "name": "Xlorg",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "32"
+    }
+  ],
+  "323": [
+    {
+      "name": "Monks of th...",
+      "COMBAT SKILL": "24",
+      "ENDURANCE": "42"
+    }
+  ],
+  "333": [
+    {
+      "name": "Anapheg",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "50"
+    }
+  ],
+  "339": [
+    {
+      "name": "Rahgu",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "33"
+    }
+  ],
+  "346": [
+    {
+      "name": "Ghagrim",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "38"
+    }
+  ]
+}

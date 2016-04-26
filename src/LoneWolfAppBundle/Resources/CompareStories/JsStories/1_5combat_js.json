@@ -1,0 +1,275 @@
+{
+  "4": [
+    {
+      "name": "Palace Gaoler",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "21"
+    }
+  ],
+  "12": [
+    {
+      "name": "Bloodlug",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "11"
+    }
+  ],
+  "20": [
+    {
+      "name": "Horseman",
+      "COMBAT SKILL": "21",
+      "ENDURANCE": "28"
+    }
+  ],
+  "46": [
+    {
+      "name": "Vestibule G...",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "24"
+    }
+  ],
+  "57": [
+    {
+      "name": "Elix",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "32"
+    }
+  ],
+  "64": [
+    {
+      "name": "Kwaraz",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "30"
+    }
+  ],
+  "91": [
+    {
+      "name": "Palace Gaoler",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "21"
+    }
+  ],
+  "106": [
+    {
+      "name": "Courier",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "23"
+    }
+  ],
+  "110": [
+    {
+      "name": "Kwaraz",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "30"
+    }
+  ],
+  "119": [
+    {
+      "name": "Palace Gate...",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "30"
+    }
+  ],
+  "123": [
+    {
+      "name": "Sharnazim U...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "28"
+    }
+  ],
+  "135": [
+    {
+      "name": "Sharnazim W...",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "22"
+    }
+  ],
+  "159": [
+    {
+      "name": "Armoury Guard",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "22"
+    }
+  ],
+  "162": [
+    {
+      "name": "Steamspiders",
+      "COMBAT SKILL": "10",
+      "ENDURANCE": "35"
+    }
+  ],
+  "168": [
+    {
+      "name": "Vestibule G...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "23"
+    }
+  ],
+  "178": [
+    {
+      "name": "Armoury Guard",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "22"
+    }
+  ],
+  "190": [
+    {
+      "name": "Hammerfist ...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "30"
+    }
+  ],
+  "194": [
+    {
+      "name": "Yas",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "28"
+    }
+  ],
+  "223": [
+    {
+      "name": "Crypt Spawn",
+      "COMBAT SKILL": "24",
+      "ENDURANCE": "40"
+    }
+  ],
+  "231": [
+    {
+      "name": "Drakkarim",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "34"
+    }
+  ],
+  "240": [
+    {
+      "name": "Itikar",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "30"
+    }
+  ],
+  "244": [
+    {
+      "name": "Drakkarim K...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "28"
+    }
+  ],
+  "253": [
+    {
+      "name": "Dhorgaan",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "40"
+    }
+  ],
+  "273": [
+    {
+      "name": "Drakkarim",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "35"
+    }
+  ],
+  "280": [
+    {
+      "name": "Drakkar",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "25"
+    }
+  ],
+  "299": [
+    {
+      "name": "Vordak",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "25"
+    }
+  ],
+  "316": [
+    {
+      "name": "Drakkar",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "26"
+    }
+  ],
+  "324": [
+    {
+      "name": "Drakkarim S...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "25"
+    }
+  ],
+  "330": [
+    {
+      "name": "Drakkar",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "23"
+    }
+  ],
+  "334": [
+    {
+      "name": "Tower Guards",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "32"
+    }
+  ],
+  "353": [
+    {
+      "name": "Darklord Ha...",
+      "COMBAT SKILL": "28",
+      "ENDURANCE": "45"
+    }
+  ],
+  "355": [
+    {
+      "name": "Vordak",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "26"
+    }
+  ],
+  "357": [
+    {
+      "name": "Platform Se...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "23"
+    }
+  ],
+  "361": [
+    {
+      "name": "Drakkar",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "25"
+    }
+  ],
+  "370": [
+    {
+      "name": "Itikar",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "30"
+    }
+  ],
+  "375": [
+    {
+      "name": "Tower Guard",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "22"
+    }
+  ],
+  "387": [
+    {
+      "name": "Drakkarim",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "35"
+    }
+  ],
+  "389": [
+    {
+      "name": "Sentry",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "23"
+    }
+  ],
+  "393": [
+    {
+      "name": "Drakkar",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "25"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "14": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "14"
+    }
+  ],
+  "32": [
+    {
+      "name": "Kalkoth 1",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "35"
+    },
+    {
+      "name": "Kalkoth 2",
+      "COMBAT SKILL": "10",
+      "ENDURANCE": "32"
+    },
+    {
+      "name": "Kalkoth 3",
+      "COMBAT SKILL": "8",
+      "ENDURANCE": "30"
+    }
+  ],
+  "68": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "28"
+    }
+  ],
+  "78": [
+    {
+      "name": "Baknar",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "30"
+    }
+  ],
+  "83": [
+    {
+      "name": "Ice Barbari...",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "24"
+    }
+  ],
+  "88": [
+    {
+      "name": "Javek",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "15"
+    }
+  ],
+  "89": [
+    {
+      "name": "Doomwolf 1",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "24"
+    },
+    {
+      "name": "Doomwolf 2",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "23"
+    },
+    {
+      "name": "Doomwolf 3",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "20"
+    }
+  ],
+  "99": [
+    {
+      "name": "Helghast",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "30"
+    }
+  ],
+  "103": [
+    {
+      "name": "Baknar",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "30"
+    }
+  ],
+  "106": [
+    {
+      "name": "Ice Barbarians",
+      "COMBAT SKILL": "19",
+      "ENDURANCE": "36"
+    }
+  ],
+  "108": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "16",
+      "ENDURANCE": "24"
+    }
+  ],
+  "123": [
+    {
+      "name": "Kalkoth",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "30"
+    }
+  ],
+  "137": [
+    {
+      "name": "Ice Barbari...",
+      "COMBAT SKILL": "30",
+      "ENDURANCE": "30"
+    }
+  ],
+  "138": [
+    {
+      "name": "Kalkoth 1",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "35"
+    },
+    {
+      "name": "Kalkoth 2",
+      "COMBAT SKILL": "10",
+      "ENDURANCE": "32"
+    }
+  ],
+  "147": [
+    {
+      "name": "Kalkoth",
+      "COMBAT SKILL": "10",
+      "ENDURANCE": "28"
+    }
+  ],
+  "158": [
+    {
+      "name": "Ice Barbari...",
+      "COMBAT SKILL": "20",
+      "ENDURANCE": "28"
+    }
+  ],
+  "161": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "29"
+    }
+  ],
+  "164": [
+    {
+      "name": "Akraa'Neonor",
+      "COMBAT SKILL": "23",
+      "ENDURANCE": "50"
+    }
+  ],
+  "180": [
+    {
+      "name": "Kalkoth",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "35"
+    }
+  ],
+  "200": [
+    {
+      "name": "Akraa'Neonor",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "50"
+    }
+  ],
+  "208": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "30"
+    }
+  ],
+  "241": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "18",
+      "ENDURANCE": "28"
+    }
+  ],
+  "259": [
+    {
+      "name": "Kalkoth",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "35"
+    }
+  ],
+  "260": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "29"
+    }
+  ],
+  "263": [
+    {
+      "name": "Kalkoth 1",
+      "COMBAT SKILL": "11",
+      "ENDURANCE": "35"
+    },
+    {
+      "name": "Kalkoth 2",
+      "COMBAT SKILL": "10",
+      "ENDURANCE": "32"
+    },
+    {
+      "name": "Kalkoth 3",
+      "COMBAT SKILL": "8",
+      "ENDURANCE": "30"
+    }
+  ],
+  "265": [
+    {
+      "name": "Crystal Fro...",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "30"
+    }
+  ],
+  "270": [
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "25"
+    }
+  ],
+  "296": [
+    {
+      "name": "Ice Barbarians",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "30"
+    }
+  ],
+  "304": [
+    {
+      "name": "Helghast",
+      "COMBAT SKILL": "22",
+      "ENDURANCE": "30"
+    }
+  ],
+  "343": [
+    {
+      "name": "Doomwolf 1",
+      "COMBAT SKILL": "15",
+      "ENDURANCE": "24"
+    },
+    {
+      "name": "Doomwolf 2",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "23"
+    },
+    {
+      "name": "Doomwolf 3",
+      "COMBAT SKILL": "14",
+      "ENDURANCE": "20"
+    },
+    {
+      "name": "Ice Barbarian",
+      "COMBAT SKILL": "17",
+      "ENDURANCE": "29"
+    }
+  ]
+}
