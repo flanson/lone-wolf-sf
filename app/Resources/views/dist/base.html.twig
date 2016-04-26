@@ -10,7 +10,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="/dist/css/vendor.5304c02059281008.css" media="all">
             {#<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" type="text/css" media="all">#}
-            <link rel="stylesheet" href="/dist/css/app.b014d93375b660cc.css" media="all">
+            <link rel="stylesheet" href="/dist/css/app.7fcef1c8a13c1117.css" media="all">
         {% endblock %}
 
         {% block Ie8Html5SupportJs %}
@@ -21,7 +21,7 @@
     </head>
     <body class="{% block bodyClass %}bg-old-paper{% endblock %}">
         {% block flash_message_list %}
-            {#{% include ':Common:flash_message_list.html.twig' %}#}
+            {% include ':Common:flash_message_list.html.twig' %}
         {% endblock %}
 
         {% block body_content %}

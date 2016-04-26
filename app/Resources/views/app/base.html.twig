@@ -28,7 +28,7 @@
     </head>
     <body class="{% block bodyClass %}bg-old-paper{% endblock %}">
         {% block flash_message_list %}
-            {#{% include ':Common:flash_message_list.html.twig' %}#}
+            {% include ':Common:flash_message_list.html.twig' %}
         {% endblock %}
 
         {% block body_content %}

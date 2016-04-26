@@ -1,0 +1,28 @@
+
+{% set popupTitle = popupTitle|default('Are you sure ?') %}
+{% set closeButton = closeButton|default('close_button'|trans) %}
+{% set validButton = validButton|default('are_you_sure_confirmation'|trans) %}
+{% set actionPath = actionPath|default('') %}
+{% set modalId = modalId|default('areYouSure') %}
+<div class="modal fade" id="{{ modalId }}" tabindex="-1" role="dialog" aria-labelledby="areYouSureModalLabel">
+    {% block form_start %}
+        <form class="modal-dialog" role="document" action="{{ actionPath }}" method="post">
+    {% endblock %}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="areYouSureModalLabel">{{ popupTitle }}</h4>
+                </div>
+                <div class="modal-body">
+                    {% block modal_body %}
+                    {% endblock %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{{ closeButton }}</button>
+                    <button type="submit" class="btn btn-primary" value="Submit">{{ validButton }}</button>
+                </div>
+            </div>
+    {% block form_end %}
+        </form>
+    {% endblock %}
+</div>

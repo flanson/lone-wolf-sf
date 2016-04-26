@@ -2,7 +2,7 @@
 
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% block title %}{{ 'sign_in_title'|trans({ '%game_label%': 'game_label'|trans}, 'seo') }}{% endblock %}
+{% block title %}{{ 'sign_in_title'|trans({ '%game_label%': 'game_label'|trans({}, 'messages')}, 'seo') }}{% endblock %}
 
 {% block body_content %}
     <div class="container">
@@ -11,7 +11,7 @@
             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
         <form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
-            <h2 class="form-signin-heading">{{ 'sign_in_form_title'|trans }}</h2>
+            <h2 class="form-signin-heading">{{ 'sign_in_form_title'|trans({}, 'messages') }}</h2>
             <label for="username" class="sr-only">{{ 'security.login.username'|trans }}</label>
             <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="{{ 'security.login.username'|trans }}" required autofocus>
             <label for="password" class="sr-only">{{ 'security.login.password'|trans }}</label>

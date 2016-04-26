@@ -15,46 +15,69 @@
             {#{% include ':Common:loneWolfIcon.html.twig' %}#}
             </header>
             <div class="main">
+                {% set currentEnemyId = -1 %}
+                {% if hero.currentEnemy is not empty and hero.currentEnemy.enemy is not empty %}
+                    {% set currentEnemyId = hero.currentEnemy.enemy.id %}
+                {% endif %}
+                {% set destinationOpen = true %}
+                {% for enemy in chapter.enemies %}
+                    {# Defeated #}
+                    {% set currentFight = (currentEnemyId == enemy.id) ? true : false %}
+                    {% set message_key = enemy.name %}
+                    {% set href = (currentFight) ? path('combat') : path('combat_enemy', { id:enemy.id }) %}
+                    {% set iconClasses = ['glyphicon','glyphicon-tint','text-danger'] %}
+                    {% if currentFight %}
+                        {% set btnClasses = ['btn','btn-lg','btn-warning'] %}
+                    {% elseif enemy.id in etape.enemiesDefeated %}
+                        {% set btnClasses = ['btn','btn-lg','btn-success'] %}
+                    {% endif %}
+                    {% if enemy.id in etape.enemiesDefeated %}
+                        {% include ':Common:buttonWithoutPath.html.twig' %}
+                    {% else %}
+                        {% set destinationOpen = false %}
+                        {% include ':Common:buttonWithPath.html.twig' %}
+                    {% endif %}
+                    {% set btnClasses = [] %} {# reset for other button #}
+                {% endfor %}
+
+                {# Combat Custom Enemy #}
+                {% if hero.currentEnemy is not empty and hero.currentEnemy.enemy is empty %}
+                    {% set message_key = hero.currentEnemy.name %}
+                    {% set href = path('combat') %}
+                    {% set iconClasses = ['glyphicon','glyphicon-tint','text-danger'] %}
+                    {% set btnClasses = ['btn','btn-lg','btn-warning'] %}
+                    {% include ':Common:buttonWithPath.html.twig' %}
+                    {% set btnClasses = [] %} {# reset for other button #}
+                {% endif %}
+
                 {# Chapters selection button #}
                 {#{% set destinationList = [50,25,258] %}#}
-                {#{% for destination in destinationList %}#}
-                    {#{% include ':Common:gotoDestination.html.twig' %}#}
-                {#{% endfor %}#}
+                {% for destination in chapter.directions %}
+                    {% include ':Common:gotoDestination.html.twig' %}
+                {% endfor %}
 
-                {# Select Chapter #}
-                {% set message_key = 'select_chapter_label' %}
-                {% include ':Common:chooseDestinationButton.html.twig' %}
+                {% if chapter.enemies is empty and chapter.directions is empty %}
+                    {# Dead #}
+                    {% set message_key = 'dead_label' %}
+                    {% set href = path('hero_dead') %}
+                    {% set iconClasses = ['glyphicon','glyphicon-random','text-danger'] %}
+                    {% include ':Common:buttonWithPath.html.twig' %}
 
-                {# Combat #}
-                {% set message_key = (hero.currentEnemy is null) ? 'goto_combat_label' : 'continue_combat_label'  %}
-                {% set href = (hero.currentEnemy is null) ? path('enemy_creation') : path('combat') %}
-                {% set iconClasses = ['glyphicon','glyphicon-tint','text-danger'] %}
-                {% include ':Common:buttonWithPath.html.twig' %}
+                    {# Select Chapter #}
+                    {% set message_key = 'select_chapter_label' %}
+                    {% set iconClasses = ['glyphicon','glyphicon-random','text-danger'] %}
+                    {% include ':Common:chooseDestinationButton.html.twig' %}
+                {% endif %}
 
-                {# Edit Hero Stats #}
-                {% set message_key = 'edit_hero_stats_label' %}
-                {% set href = path('hero_edition') %}
-                {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
-                {% include ':Common:buttonWithPath.html.twig' %}
-
-                {# Edit Hero Current Live #}
-                {#{% set message_key = 'edit_hero_life_label' %}#}
-                {#{% set href = path('hero_life') %}#}
-                {#{% set iconClasses = ['glyphicon','glyphicon-heart','text-danger'] %}#}
-                {#{% include ':Common:buttonWithPath.html.twig' %}#}
-
-                {# Abandon adventure #}
-                {% set message_key = 'abandon_adventure_label' %}
-                {% set href = path('abandon_adventure') %}
-                {% set iconClasses = [] %}
-                {#{% set iconClasses = ['glyphicon','glyphicon-heart','text-danger'] %}#}
+                {# Add one Life #}
+                {% set message_key = 'add_one_life' %}
+                {% set href = path('farniente') %}
+                {% set iconClasses = ['glyphicon','glyphicon-heart','text-danger'] %}
                 {% include ':Common:buttonWithPath.html.twig' %}
             </div>
 
-            {% include ':Common:chooseDestination.html.twig' %}
-
             <footer>
-
+                {% include ':Common:others.html.twig' %}
             </footer>
         </div>
     {% endblock %}

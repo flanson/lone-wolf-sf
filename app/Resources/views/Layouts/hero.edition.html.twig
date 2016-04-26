@@ -11,15 +11,19 @@
             {{ form_errors(edit_form) }}
             {% set message_key = newHero ? 'hero_creation_form_title' : 'hero_edition_form_title' %}
             <h2 class="form-signin-heading">{{ message_key|trans }}</h2>
-            <div class="row row-padding-after text-center">
-                {% set lifeCurrent = hero.life|default(1) %}
-                {% set lifeMax = hero.enduranceMax|default(1) %}
-                {% include ':Common:lifeStatus.html.twig' %}
-            </div>
+            {% if not newHero %}
+                <div class="row row-padding-after text-center">
+                    {% set lifeCurrent = hero.life|default(1) %}
+                    {% set lifeMax = hero.enduranceMax|default(1) %}
+                    {% include ':Common:lifeStatus.html.twig' %}
+                </div>
+            {% endif %}
 
             {{ form_row(edit_form.enduranceMax, { 'input_group_addon_text' : 'E'}) }}
 
+            {% if not newHero %}
             {{ form_row(edit_form.life, { 'input_group_addon_text' : 'HP'}) }}
+            {% endif %}
 
             {{ form_row(edit_form.combatSkill, { 'input_group_addon_text' : 'H'}) }}
 
@@ -37,13 +41,26 @@
             </a>
         </div>
 
+        {# Delete Hero #}
         {% if delete_form|default(null) %}
-            {# Delete Hero #}
-            {#form-signin form-hero form-horizontal#}
-            {{ form_start(delete_form, { 'attr': { 'class': 'form-signin form-hero form-horizontal'}}) }}
-            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Delete">{{ 'delete_button_label'|trans }}</button>
-            {#<input type="submit" value="Delete">#}
-            {{ form_end(delete_form) }}
+            {% set message_key = 'delete_button_label' %}
+            {% set iconClasses = [] %}
+            {% set btnClasses = ['btn','btn-lg','btn-primary','btn-block','btn-form'] %}
+            <div data-toggle="modal" data-target="#areYouSure">
+                {% include ':Common:buttonWithoutPath.html.twig' %}
+            </div>
+
+            {% embed ':Common:areYouSurePopup.html.twig' %}
+                {% block form_start %}
+                    {{ form_start(delete_form, { 'attr': { 'class': 'modal-dialog'}}) }}
+                {% endblock %}
+                {% block modal_body %}
+                    {{ 'delete_hero_description'|trans }}
+                {% endblock %}
+                {% block form_end %}
+                    {{ form_end(delete_form) }}
+                {% endblock %}
+            {% endembed %}
         {% endif %}
 
     </div> <!-- /container -->

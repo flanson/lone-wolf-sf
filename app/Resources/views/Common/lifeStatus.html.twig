@@ -1,10 +1,23 @@
 {% set lifeCurrent = lifeCurrent|default(1) %}
 {% set lifeMax = lifeMax|default(1) %}
 {% set lifePourcent = (lifeCurrent/lifeMax * 100) // 1 %}
+{% set progressBarClasses = ['progress-bar'] %}
+{% if lifePourcent < 10 %}
+    {% set progressBarClasses = progressBarClasses|merge(['progress-bar-hurt']) %}
+{% elseif lifePourcent < 30 %}
+    {% set progressBarClasses = progressBarClasses|merge(['progress-bar-wounded']) %}
+{% elseif lifePourcent < 50 %}
+    {% set progressBarClasses = progressBarClasses|merge(['progress-bar-ok']) %}
+{% elseif lifePourcent < 70 %}
+    {% set progressBarClasses = progressBarClasses|merge(['progress-bar-fine']) %}
+{% else %}
+    {% set progressBarClasses = progressBarClasses|merge(['progress-bar-full']) %}
+{% endif %}
+
 <div class="col-xs-9">
     <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ lifePourcent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ lifePourcent }}%">
-            <span class="sr-only">{{ lifePourcent }}% Complete (success)</span>
+        <div class="{{ progressBarClasses|join(' ') }}" role="progressbar" aria-valuenow="{{ lifePourcent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ lifePourcent }}%">
+            <span class="sr-only">{{ lifePourcent }}%</span>
         </div>
     </div>
 </div>
@@ -15,3 +28,17 @@
         <div class="life-status-max block-inline">{{ lifeMax }}</div>
     </div>
 </div>
+{#if (value < 10){#}
+{#$(selector).css({ 'background': 'Red' });#}
+{##d9534f#}
+{#} else if (value < 30){#}
+{#$(selector).css({ 'background': 'Orange' });#}
+{##f0ad4e#}
+{#} else if (value < 50){#}
+{#$(selector).css({ 'background': 'Yellow' });#}
+{##F0DC4E#}
+{#} else{#}
+{##C8F04E#}
+{#$(selector).css({ 'background': 'LightGreen' });#}
+{##5cb85c#}
+{#}#}

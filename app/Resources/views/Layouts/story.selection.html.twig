@@ -8,10 +8,18 @@
             {% include ':Common:loneWolfIcon.html.twig' %}
         </header>
         <div class="main">
-            {% for story in storyList %}
-                {% set message = story.name %}
-                {% set href = path('select_adventure', { id:story.id }) %}
-                {% include ':Common:buttonWithPath.html.twig' %}
+            {% for campaign in campaignList if campaign.storyList is not empty %}
+                <div class="campaign">
+                    <h1 class="text-center campaing-title">{{ campaign.name }}</h1>
+                    {% set storyList = campaign.storyList %}
+                    <div class="story-list">
+                        {% for story in storyList if story.active %}
+                            {% set message = story.name %}
+                            {% set href = path('select_adventure', { id:story.id }) %}
+                            {% include ':Common:buttonWithPath.html.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
             {% endfor %}
 
         </div>

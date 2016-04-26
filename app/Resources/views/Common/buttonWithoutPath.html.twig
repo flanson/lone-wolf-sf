@@ -4,8 +4,9 @@
     {% set message = message_key|trans %}
 {% endif %}
 {% set iconClasses = iconClasses|default([]) %}
+{% set btnClasses = btnClasses|default(['btn','btn-lg','btn-primary']) %}
 <div class="row row-padding-after text-center">
-    <div class="btn btn-lg btn-primary">
+    <div class="{{ btnClasses|join(' ') }}">
         {% if iconClasses|length > 0 %}
             <span class="{{ iconClasses|join(' ') }}" aria-hidden="true"></span>&nbsp;&nbsp;
         {% endif %}

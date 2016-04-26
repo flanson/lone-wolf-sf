@@ -1,0 +1,98 @@
+{% set inCombat = inCombat|default(false) %}
+{% set modalAbandonCombatId = 'areYouSureAbandonCombat' %}
+{% set modalAbandonAdventureId = 'areYouSureAbandonAdventure' %}
+<div class="dropup text-center">
+    <button class="btn btn-lg btn-default dropdown-toggle btn-primary" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span class="glyphicon glyphicon-cog text-danger" aria-hidden="true"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-center bg-old-paper" aria-labelledby="dropdownMenu2">
+        <li>
+            {# Select Chapter #}
+            {% set message_key = 'select_chapter_label' %}
+            {% set iconClasses = ['glyphicon','glyphicon-random','text-danger'] %}
+            {% include ':Common:chooseDestinationButton.html.twig' %}
+        </li>
+        {% if not inCombat %}
+        <li>
+            {# Combat #}
+            {% set message_key = (hero.currentEnemy is null) ? 'goto_combat_label' : 'continue_combat_label'  %}
+            {% set href = (hero.currentEnemy is null) ? path('enemy_creation') : path('combat') %}
+            {% set iconClasses = ['glyphicon','glyphicon-tint','text-danger'] %}
+            {% include ':Common:buttonWithPath.html.twig' %}
+        </li>
+        {% endif %}
+        {% if hero.currentEnemy is not null and abandonCombatForm is defined %}
+        <li>
+            {# Abandon combat #}
+            {#<div class="form-signin">#}
+                {#{% set href = path('abandon_combat') %}#}
+                {#<a href="{{ href }}">#}
+                    {#<div class="btn btn-lg btn-primary btn-block">#}
+                        {#{{ 'abandon_combat_label'|trans }}#}
+                    {#</div>#}
+                {#</a>#}
+            {#</div>#}
+            {# Abandon combat #}
+            {% set message_key = 'abandon_combat_label' %}
+            {% set iconClasses = [] %}
+            <div data-toggle="modal" data-target="#{{ modalAbandonCombatId }}">
+                {% include ':Common:buttonWithoutPath.html.twig' %}
+            </div>
+        </li>
+            {% if inCombat %}
+            <li>
+                {# Edit Enemy Stats #}
+                {% set message_key = 'edit_enemy_stats_label' %}
+                {% set href = path('enemy_edition') %}
+                {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
+                {% include ':Common:buttonWithPath.html.twig' %}
+            </li>
+            {% endif %}
+        {% endif %}
+        <li>
+            {# Edit Hero Stats #}
+            {% set message_key = 'edit_hero_stats_label' %}
+            {% set href = path('hero_edition') %}
+            {% set iconClasses = ['glyphicon','glyphicon-list-alt','text-danger'] %}
+            {% include ':Common:buttonWithPath.html.twig' %}
+        </li>
+        {% if abandonAdventureForm is defined %}
+            <li role="separator" class="divider"></li>
+            <li>
+                {# Abandon adventure #}
+                {% set message_key = 'abandon_adventure_label' %}
+                {% set iconClasses = [] %}
+                <div data-toggle="modal" data-target="#{{ modalAbandonAdventureId }}">
+                    {% include ':Common:buttonWithoutPath.html.twig' %}
+                </div>
+            </li>
+        {% endif %}
+    </ul>
+    {% if abandonAdventureForm is defined %}
+        {% embed ':Common:areYouSurePopup.html.twig' with { modalId : modalAbandonAdventureId } %}
+            {% block form_start %}
+                {{ form_start(abandonAdventureForm, { 'attr': { 'class': 'modal-dialog'}}) }}
+            {% endblock %}
+            {% block modal_body %}
+                {{ 'abandon_adventure_description'|trans }}
+            {% endblock %}
+            {% block form_end %}
+                {{ form_end(abandonAdventureForm) }}
+            {% endblock %}
+        {% endembed %}
+    {% endif %}
+    {% if abandonCombatForm is defined %}
+        {% embed ':Common:areYouSurePopup.html.twig' with { modalId : modalAbandonCombatId } %}
+            {% block form_start %}
+                {{ form_start(abandonCombatForm, { 'attr': { 'class': 'modal-dialog'}}) }}
+            {% endblock %}
+            {% block modal_body %}
+                {{ 'abandon_combat_description'|trans }}
+            {% endblock %}
+            {% block form_end %}
+                {{ form_end(abandonCombatForm) }}
+            {% endblock %}
+        {% endembed %}
+    {% endif %}
+    {% include ':Common:chooseDestination.html.twig' %}
+</div>
