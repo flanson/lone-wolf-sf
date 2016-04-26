@@ -24,3 +24,14 @@
 /web/config.php
 /Sf-Quick-Install.md
 .idea/vcs.xml
+/app/Resources/views/dist/*
+!/app/Resources/views/dist/.gitkeep
+/app/Resources/public/dist/fonts/*
+!/app/Resources/public/dist/fonts/.gitkeep
+/app/Resources/public/dist/css/*
+!/app/Resources/public/dist/css/.gitkeep
+/app/Resources/public/dist/img/*
+!/app/Resources/public/dist/img/.gitkeep
+/app/Resources/public/dist/js/*
+!/app/Resources/public/dist/js/.gitkeep
+!/app/Resources/public/dist/.gitkeep
