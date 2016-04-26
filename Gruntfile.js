@@ -194,6 +194,16 @@ module.exports = function (grunt) {
 
         // Copies remaining files to places other tasks can use (for app_dev.php use with symlinks)
         copy: {
+            image: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'app/Resources/public/app/img',
+                        src: '**/*.{png,jpg,jpeg,gif}',
+                        dest: 'app/Resources/public/dist/img'
+                    }
+                ]
+            },
             dist: {
                 files: [
                     {
@@ -264,7 +274,8 @@ module.exports = function (grunt) {
         'less',
         'newer:jshint',
         'useminPrepare',
-        'newer:imagemin',
+        //'newer:imagemin',
+        'copy:image',
         'concat',
         'copy:dist',
         'csslint',
