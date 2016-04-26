@@ -1,0 +1,51 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+    campaign.list:
+        1:
+            name: 'Kai'
+            story_list:
+                1: 'Flight from the Dark'
+                2: 'Fire on the Water'
+                3: 'The Caverns of Kalte'
+                4: 'The Chasm of Doom'
+        2:
+            name: 'Magnakai'
+            story_list:
+                1: 'The Kingdoms of Terror'
+                2: 'Castle Death'
+                3: 'The Jungle of Horrors'
+                4: 'The Cauldron of Fear'
+                5: 'The Dungeons of Torgar'
+                6: 'The Prisoners of Time'
+                7: 'The Masters of Darkness'
+        3:
+            name: 'Grand Master'
+            story_list:
+                1: 'The Plague Lords of Ruel'
+                2: 'The Captives of Kaag'
+                3: 'The Darke Crusade'
+                4: 'The Legacy of Vashna'
+                5: 'The Deathlord of Ixia'
+                6: 'Dawn of the Dragons'
+                7: "Wolf's Bane"
+                8: 'The Curse of Naar'
+
+services:
+
+    lone_wolf_app.story_loader:
+        class: LoneWolfAppBundle\Services\StoryLoader
+        arguments:
+            - %campaign.list%
+            - '@doctrine.orm.entity_manager'
+
+    lone_wolf_app.story_crawler:
+        class: LoneWolfAppBundle\Services\StoryCrawler
+        arguments:
+            - %campaign.list%
+
+    lone_wolf_app.story_checker:
+        class: LoneWolfAppBundle\Services\StoryChecker
+        arguments:
+            - %campaign.list%
