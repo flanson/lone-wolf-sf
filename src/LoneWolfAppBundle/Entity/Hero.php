@@ -43,21 +43,14 @@ class Hero
     private $life;
 
     /**
-     * @ORM\ManyToOne(targetEntity="LoneWolfAppBundle\Entity\Story")
-     * @ORM\JoinColumn(name="story_id", referencedColumnName="id", nullable=true)
+     * @ORM\OneToOne(targetEntity="LoneWolfAppBundle\Entity\Adventure")
+     * @ORM\JoinColumn(name="adventure_id", referencedColumnName="id", nullable=true)
      */
-    private $currentStory;
+    private $currentAdventure;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="currentChapter", type="integer", nullable=true)
-     */
-    private $currentChapter;
-
-    /**
-     * @ORM\OneToOne(targetEntity="LoneWolfAppBundle\Entity\Enemy")
-     * @ORM\JoinColumn(name="enemy_id", referencedColumnName="id", nullable=true)
+     * @ORM\OneToOne(targetEntity="LoneWolfAppBundle\Entity\Combat")
+     * @ORM\JoinColumn(name="combat_id", referencedColumnName="id", nullable=true)
      */
     private $currentEnemy;
 
@@ -144,61 +137,13 @@ class Hero
     }
 
     /**
-     * Set currentChapter
-     *
-     * @param integer $currentChapter
-     *
-     * @return Hero
-     */
-    public function setCurrentChapter($currentChapter)
-    {
-        $this->currentChapter = $currentChapter;
-
-        return $this;
-    }
-
-    /**
-     * Get currentChapter
-     *
-     * @return integer
-     */
-    public function getCurrentChapter()
-    {
-        return $this->currentChapter;
-    }
-
-    /**
-     * Set currentStory
-     *
-     * @param Story $currentStory
-     *
-     * @return Hero
-     */
-    public function setCurrentStory(Story $currentStory = null)
-    {
-        $this->currentStory = $currentStory;
-
-        return $this;
-    }
-
-    /**
-     * Get currentStory
-     *
-     * @return Story
-     */
-    public function getCurrentStory()
-    {
-        return $this->currentStory;
-    }
-
-    /**
      * Set currentEnemy
      *
-     * @param Enemy $currentEnemy
+     * @param Combat $currentEnemy
      *
      * @return Hero
      */
-    public function setCurrentEnemy(Enemy $currentEnemy = null)
+    public function setCurrentEnemy(Combat $currentEnemy = null)
     {
         $this->currentEnemy = $currentEnemy;
 
@@ -208,7 +153,7 @@ class Hero
     /**
      * Get currentEnemy
      *
-     * @return Enemy
+     * @return Combat
      */
     public function getCurrentEnemy()
     {
@@ -218,5 +163,34 @@ class Hero
     public function __toString()
     {
         return strval($this->id);
+    }
+
+    /**
+     * Set currentAdventure
+     *
+     * @param \LoneWolfAppBundle\Entity\Adventure $currentAdventure
+     *
+     * @return Hero
+     */
+    public function setCurrentAdventure(\LoneWolfAppBundle\Entity\Adventure $currentAdventure = null)
+    {
+        $this->currentAdventure = $currentAdventure;
+
+        return $this;
+    }
+
+    /**
+     * Get currentAdventure
+     *
+     * @return \LoneWolfAppBundle\Entity\Adventure
+     */
+    public function getCurrentAdventure()
+    {
+        return $this->currentAdventure;
+    }
+
+    public function setLifeToMax()
+    {
+        $this->life = $this->enduranceMax;
     }
 }

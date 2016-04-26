@@ -43,12 +43,10 @@ class Enemy
     private $enduranceMax;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="life", type="integer", nullable=true)
+     * @ORM\ManyToOne(targetEntity="LoneWolfAppBundle\Entity\Chapter", inversedBy="enemies")
+     * @ORM\JoinColumn(name="chapter_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
-    private $life;
-
+    private $chapter;
 
     /**
      * Get id
@@ -132,33 +130,32 @@ class Enemy
         return $this->enduranceMax;
     }
 
+    public function __toString()
+    {
+        return $this->name . ' E:' . strval($this->enduranceMax) . ' H:' . strval($this->combatSkill);
+    }
+
     /**
-     * Set life
+     * Set chapter
      *
-     * @param integer $life
+     * @param \LoneWolfAppBundle\Entity\Chapter $chapter
      *
      * @return Enemy
      */
-    public function setLife($life)
+    public function setChapter(\LoneWolfAppBundle\Entity\Chapter $chapter)
     {
-        $this->life = $life;
+        $this->chapter = $chapter;
 
         return $this;
     }
 
     /**
-     * Get life
+     * Get chapter
      *
-     * @return int
+     * @return \LoneWolfAppBundle\Entity\Chapter
      */
-    public function getLife()
+    public function getChapter()
     {
-        return $this->life;
-    }
-
-    public function __toString()
-    {
-        return $this->name . ' E:' . strval($this->enduranceMax) . ' H:' . strval($this->combatSkill);
+        return $this->chapter;
     }
 }
-

@@ -5,12 +5,12 @@ namespace LoneWolfAppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Hero
+ * Combat
  *
- * @ORM\Table(name="hero")
- * @ORM\Entity(repositoryClass="LoneWolfAppBundle\Repository\HeroRepository")
+ * @ORM\Table(name="combat")
+ * @ORM\Entity(repositoryClass="LoneWolfAppBundle\Repository\CombatRepository")
  */
-class Hero
+class Combat
 {
     /**
      * @var int
@@ -20,6 +20,13 @@ class Hero
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
 
     /**
      * @var int
@@ -43,23 +50,10 @@ class Hero
     private $life;
 
     /**
-     * @ORM\OneToOne(targetEntity="LoneWolfAppBundle\Entity\Story")
-     * @ORM\JoinColumn(name="story_id", referencedColumnName="id", nullable=true)
+     * @ORM\ManyToOne(targetEntity="LoneWolfAppBundle\Entity\Enemy")
+     * @ORM\JoinColumn(name="enemy_id", referencedColumnName="id", nullable=true, onDelete="CASCADE")
      */
-    private $currentStory;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="currentChapter", type="integer", nullable=true)
-     */
-    private $currentChapter;
-
-    /**
-     * @ORM\OneToOne(targetEntity="LoneWolfAppBundle\Entity\Enemy")
-     * @ORM\JoinColumn(name="enemy_id", referencedColumnName="id", nullable=true)
-     */
-    private $currentEnemy;
+    private $enemy;
 
     /**
      * Get id
@@ -72,11 +66,35 @@ class Hero
     }
 
     /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Enemy
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
      * Set combatSkill
      *
      * @param integer $combatSkill
      *
-     * @return Hero
+     * @return Enemy
      */
     public function setCombatSkill($combatSkill)
     {
@@ -100,7 +118,7 @@ class Hero
      *
      * @param integer $enduranceMax
      *
-     * @return Hero
+     * @return Enemy
      */
     public function setEnduranceMax($enduranceMax)
     {
@@ -124,7 +142,7 @@ class Hero
      *
      * @param integer $life
      *
-     * @return Hero
+     * @return Enemy
      */
     public function setLife($life)
     {
@@ -143,51 +161,41 @@ class Hero
         return $this->life;
     }
 
-    /**
-     * Set currentChapter
-     *
-     * @param integer $currentChapter
-     *
-     * @return Hero
-     */
-    public function setCurrentChapter($currentChapter)
+    public function __toString()
     {
-        $this->currentChapter = $currentChapter;
+        return $this->name . ' E:' . strval($this->life) . '/' . strval($this->enduranceMax) . ' H:' . strval($this->combatSkill);
+    }
+
+    /**
+     * Set enemy
+     *
+     * @param \LoneWolfAppBundle\Entity\Enemy $enemy
+     *
+     * @return Combat
+     */
+    public function setEnemy(\LoneWolfAppBundle\Entity\Enemy $enemy)
+    {
+        $this->enemy = $enemy;
+        $this->setName($enemy->getName());
+        $this->setCombatSkill($enemy->getCombatSkill());
+        $this->setEnduranceMax($enemy->getEnduranceMax());
+        $this->setLife($enemy->getEnduranceMax());
 
         return $this;
     }
 
     /**
-     * Get currentChapter
+     * Get enemy
      *
-     * @return integer
+     * @return \LoneWolfAppBundle\Entity\Enemy
      */
-    public function getCurrentChapter()
+    public function getEnemy()
     {
-        return $this->currentChapter;
+        return $this->enemy;
     }
 
-    /**
-     * Set currentStory
-     *
-     * @param Story $currentStory
-     *
-     * @return Hero
-     */
-    public function setCurrentStory(Story $currentStory = null)
+    public function setLifeToMax()
     {
-        $this->currentStory = $currentStory;
-
-        return $this;
-    }
-
-    /**
-     * Get currentStory
-     *
-     * @return Story
-     */
-    public function getCurrentStory()
-    {
-        return $this->currentStory;
+        $this->life = $this->enduranceMax;
     }
 }
