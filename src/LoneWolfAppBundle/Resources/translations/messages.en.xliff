@@ -241,6 +241,10 @@
                 <target><![CDATA[Do you really want to abandon this fight and flee like a coward ?
                  The Enemy will be lost in the abyss.]]></target>
             </trans-unit>
+            <trans-unit id="other_button_label">
+                <source>other_button_label</source>
+                <target><![CDATA[  Actions]]></target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -3,6 +3,7 @@
 namespace LoneWolfAppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,8 +17,12 @@ class CombatCreateType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('combatSkill')
-            ->add('enduranceMax')
+            ->add('combatSkill', IntegerType::class, array(
+                'attr' => array('min' => 1, 'max' => 999),
+            ))
+            ->add('enduranceMax', IntegerType::class, array(
+                'attr' => array('min' => 1, 'max' => 999),
+            ))
         ;
     }
     

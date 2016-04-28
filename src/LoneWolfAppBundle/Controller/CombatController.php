@@ -186,8 +186,8 @@ class CombatController extends Controller
         }
         if ($userEnemy->getLife() < 1) {
             $userHero->setCurrentEnemy(null);
+            $currentEtape = $userAdventure->getLastEtape();
             if ($userEnemy->getEnemy() != null) {
-                $currentEtape = $userAdventure->getLastEtape();
                 $currentEtape->addEnemyDefeated($userEnemy->getEnemy());
             }
             $entityManager->persist($userHero);
