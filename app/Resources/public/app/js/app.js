@@ -16,7 +16,7 @@
 
     $body.on('keypress', 'input[type=number]', function() {
         if ( this.value.length >  this.max.length) {
-            this.value =  this.value.slice(0,  this.max.length)
+            this.value =  this.value.slice(0,  this.max.length);
         }
     });
     //modal
