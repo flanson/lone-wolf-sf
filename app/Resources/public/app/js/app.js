@@ -35,9 +35,8 @@
             return;
         }
 
-        console.log$('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength);
-        if ($('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength) !== undefined) {
-            maxInputLength = $('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength);
+        if ($(this).parents('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength) !== undefined) {
+            maxInputLength = $(this).parents('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength);
         }
 
         var keyValue = $keyPressed.data(digitAttributes.keyPad);
