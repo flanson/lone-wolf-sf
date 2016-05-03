@@ -11,7 +11,8 @@
         form: 'digital-pad',
         keyPad: 'digit-key',
         eraseKey: 'erase-key',
-        inputTarget: 'digit-input'
+        inputTarget: 'digit-input',
+        maxInputLength: 'digit-length'
     };
 
     $body.on('keypress', 'input[type=number]', function() {
@@ -28,9 +29,15 @@
     $body.on('click', 'form[data-'+digitAttributes.form+'] [data-'+digitAttributes.keyPad+']', function(){
         var $keyPressed = $(this),
             $input = $('[data-'+digitAttributes.inputTarget+']');
+        var maxInputLength = 0;
 
         if ($keyPressed === undefined || $input === undefined) { //how to check that $input is an input
             return;
+        }
+
+        console.log$('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength);
+        if ($('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength) !== undefined) {
+            maxInputLength = $('form[data-'+digitAttributes.form+']').data(digitAttributes.maxInputLength);
         }
 
         var keyValue = $keyPressed.data(digitAttributes.keyPad);
@@ -39,6 +46,9 @@
         }
 
         if (keyValue < 0 || keyValue > 9) {
+            return;
+        }
+        if (maxInputLength !== 0 && $input.val().length ===  maxInputLength) {
             return;
         }
 
