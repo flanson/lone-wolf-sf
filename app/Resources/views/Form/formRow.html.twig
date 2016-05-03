@@ -1,7 +1,6 @@
 {%- block form_row -%}
     <div class="form-group has-success has-feedback">
         {#{% set input_group_addon_text = input_group_addon_text|default('') %}#}
-        {{- form_label(form, null, {'label_attr': {'class': 'control-label col-sm-6 col-xs-6 text-uppercase'}}) -}}
         <div class="col-sm-6 col-xs-6">
             <div class="input-group">
                 {% if input_group_addon_text|default(null) %}
@@ -10,6 +9,7 @@
                 {{ form_widget(form, {'attr': {'class': 'form-control text-right'}}) }}
             </div>
         </div>
+        {{- form_label(form, null, {'label_attr': {'class': 'control-label col-sm-6 col-xs-6 text-uppercase'}}) -}}
         {{- form_errors(form) -}}
     </div>
 {%- endblock form_row -%}
